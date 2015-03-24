@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+        <!-- Page Title -->
+
+        <!-- Responsive Enabler -->
+	    <meta name="viewport" width="device-width" initial-scale="1.0">
+        <!-- SEO -->
+	    <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Favicon -->
+        <!-- <link rel="shortcut icon" href="img/favicon.png"/> -->
+        <!-- Stylesheets -->
+        <!-- HTML5 shim and Respond.js IE8 support of HMTL5 elements and media queries -->
+	   <!--[if lt IE 9]>
+            <script src="js/html5shiv.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <?php echo HTML::style('css/reset.css'); ?>
+
+        <?php echo HTML:: style('css/style.css'); ?>
+
+	</head>
+    <!-- Start body -->
+	<body>
+        <!-- Navigation and Branding -->
+        <header id="mainHeader" role="banner">
+            <div id="logo"></div>
+            <h1>Nairobi Blooms</h1>
+            <p>delivering beauty</p>
+            <nav id="mainNav">
+                <h2>
+                    <ul  >
+                        <li><h2><?php echo HTML::link('/','Home'); ?></h2></li>
+                        <li><h2><?php echo HTML::link('#','ABout'); ?></h2></li>
+                        <li><h2><?php echo HTML::link('#','Blog'); ?></h2></li>
+                        <li><h2><?php echo HTML::link('#','Checkout'); ?></h2></li>
+                    </ul>
+                </h2>
+            </nav>
+        </header>
+        <section id="hero">
+            <?php echo $__env->yieldContent('hero section'); ?>
+        </section>
+        <!-- Main Section -->
+        <main id="nairobiBlooms" role="main">
+            <?php echo $__env->yieldContent('content'); ?>
+        </main>
+        <aside id="specials" role="complementary">
+            <h2>Bouquet Specials</h2>
+        </aside>
+        <footer id="pageFooter" role="contentinfo">
+            <!-- Footer Section -->
+            <!-- Cutomer Review & Testimonials -->
+            <!-- Copyright and Privacy details -->
+        </footer>
+    </body>
+</html>

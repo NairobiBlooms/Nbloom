@@ -1,0 +1,23 @@
+<title> Home | Nairobi Blooms</title>
+
+
+
+
+<?php $__env->startSection('content'); ?>
+<h4>Roses</h4>
+     <?php echo HTML::image('images/roses','Rose image'); ?>
+
+     <?php echo Form::open(array('url'=>'index')); ?>
+
+     <?php echo Form::checkbox('redroses'); ?>:Red
+     <?php echo Form::checkbox('yellowroses'); ?>:Yellow
+     <?php echo Form::checkbox('pinkroses'); ?>:Pink
+     <?php echo Form::checkbox('whiteroses'); ?>:White
+     <?php echo Form::submit('Add to Cart'); ?>
+
+     <?php echo Form::close(); ?>
+
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

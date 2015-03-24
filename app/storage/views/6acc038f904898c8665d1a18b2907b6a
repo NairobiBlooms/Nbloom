@@ -1,0 +1,45 @@
+<title> Make Your Own Arrangement</title>
+
+
+
+
+<?php $__env->startSection('content'); ?>
+<?php
+$colors=array('Yellow','Red','White','Pink')
+
+?>
+<h4>Roses</h4>
+     <?php echo HTML::image('images/roses','Rose image'); ?>
+
+     <?php echo Form::open(array('url'=>'make/submit')); ?>
+
+     <?php foreach($colors as $color): ?>
+     <?php echo Form::checkbox('roses[]',$color . 'roses' ,false); ?><?php echo $color; ?>:<?php echo Form::selectRange('qty', 0, 20); ?><br />
+
+     <?php endforeach; ?>
+     
+     <?php echo Form::submit('Add to Cart'); ?>
+
+     <?php echo Form::close(); ?>
+
+
+<?php /*<h4>CALLA LILY</h4>
+     <?php echo HTML::image('images/calla','Calla Lily image'); ?>
+
+     <?php echo Form::open(array('url'=>'make/submit')); ?>
+
+
+     <?php foreach($colors as $color ): ?>
+
+     <?php echo Form::checkbox('calla[]',$color . 'calla_lily' ,false); ?><?php echo $color; ?>:<?php echo Form::selectRange('qty', 0, 20); ?><br />
+
+     <?php endforeach; ?>
+     <?php echo Form::submit('Add to Cart'); ?>
+
+     <?php echo Form::close(); ?>
+
+<?php echo count($colors); ?>*/ ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php echo $__env->make('layouts.main', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
